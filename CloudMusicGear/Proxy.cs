@@ -96,7 +96,7 @@ namespace CloudMusicGear
             string responseContentType = s.ResponseHeaders["Content-Type"].Trim().ToLower();
             string url = s.fullUrl;
 
-            if (responseStatusCode == 200)
+            if (responseStatusCode / 100 == 2 || responseStatusCode / 100 == 3)
             {
                 // Most APIs are returned in text/plain but searching songs page is returned in JSON. Don't forget this!
                 if (responseContentType.Contains("text/plain") || responseContentType.Contains("application/json"))
@@ -212,7 +212,7 @@ namespace CloudMusicGear
             else
             {
                 //LogEntry($"Error Occured: {url}, StatusCode: {responseStatusCode}");
-                if (url.EndsWith(".mp3") && Config.ForceIp)
+                if (url.Contains(".mp3") && Config.ForceIp)
                 {
                     int? ipIndex = null;
                     try
@@ -225,7 +225,7 @@ namespace CloudMusicGear
                         if (Config.IpAddressList.Count > 0) ipIndex = 0;
                     }
                     if (ipIndex != null) Config.IpAddress = Config.IpAddressList[ipIndex.Value];
-                    LogEntry($"Cannot load song, Try another IP: {Config.IpAddress}");
+                    LogEntry($"Cannot load song, StatusCode: {responseStatusCode}, Try another IP: {Config.IpAddress}");
                 }
             }
         }
