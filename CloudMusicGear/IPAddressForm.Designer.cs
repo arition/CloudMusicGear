@@ -34,10 +34,9 @@
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(898, 619);
-            this.OKButton.Margin = new System.Windows.Forms.Padding(6);
+            this.OKButton.Location = new System.Drawing.Point(449, 322);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(150, 44);
+            this.OKButton.Size = new System.Drawing.Size(75, 23);
             this.OKButton.TabIndex = 0;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -48,20 +47,20 @@
             this.ipAddressCheckedListBox.CheckOnClick = true;
             this.ipAddressCheckedListBox.ColumnWidth = 250;
             this.ipAddressCheckedListBox.FormattingEnabled = true;
-            this.ipAddressCheckedListBox.Location = new System.Drawing.Point(15, 29);
-            this.ipAddressCheckedListBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ipAddressCheckedListBox.Location = new System.Drawing.Point(8, 15);
             this.ipAddressCheckedListBox.MultiColumn = true;
             this.ipAddressCheckedListBox.Name = "ipAddressCheckedListBox";
-            this.ipAddressCheckedListBox.Size = new System.Drawing.Size(1033, 550);
+            this.ipAddressCheckedListBox.Size = new System.Drawing.Size(518, 304);
             this.ipAddressCheckedListBox.TabIndex = 1;
             // 
             // IPAddressForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 678);
+            this.ClientSize = new System.Drawing.Size(532, 353);
             this.Controls.Add(this.ipAddressCheckedListBox);
             this.Controls.Add(this.OKButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "IPAddressForm";
